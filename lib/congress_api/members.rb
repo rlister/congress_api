@@ -25,7 +25,7 @@ module CongressApi
     end
 
     def votes(id)
-      v1.get("/members/#{id}/votes.json").parsed_response.results
+      v1.get("/members/#{id}/votes.json").parsed_response.results.first
     end
 
     def compare_votes(congress, chamber, id1, id2)
